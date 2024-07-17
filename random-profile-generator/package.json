@@ -1,0 +1,39 @@
+{
+  "name": "random-user-generator",
+  "author": "",
+  "productName": "random-user-generator",
+  "version": "1.0.0",
+  "description": "Randon user profile generator",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^31.1.0",
+    "electron-builder": "^24.13.3"
+  },
+  "dependencies": {
+    "fs": "^0.0.1-security"
+  },
+  "build": {
+    "extraResources": [
+      {
+        "from": "./node_modules/electron/dist/ffmpeg.dll",
+        "to": "ffmpeg.dll"
+      }
+    ],
+    "appId": "com.yourname.random-profile-generator",
+    "win": {
+      "target": "portable",
+      "icon": "build/random-user-generator-logo.ico"
+    },
+    "portable": {
+      "unicode": false,
+      "artifactName": "random-profile-generator.exe"
+    },
+    "directories": {
+      "buildResources": "build"
+    }
+  }
+}

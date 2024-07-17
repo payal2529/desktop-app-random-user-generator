@@ -1,0 +1,65 @@
+body {
+  font-family: "Arial", sans-serif;
+}
+
+header {
+  background: linear-gradient(45deg, #007bff, #00d4ff);
+  color: white;
+}
+
+header h1,
+header p {
+  animation-duration: 1.5s;
+}
+
+section {
+  padding: 2rem 0;
+}
+
+section h2 {
+  font-weight: 700;
+}
+
+footer {
+  background: #343a40;
+  color: white;
+}
+
+footer a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 3rem 1rem;
+  }
+
+  section .row {
+    flex-direction: column-reverse;
+  }
+
+  section .col-md-6 {
+    text-align: center;
+  }
+}
+
+img {
+  animation-duration: 2s;
+}
+
+.animate__animated {
+  --animate-duration: 1s;
+}
+
+.btn {
+  transition: transform 0.2s;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
